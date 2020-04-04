@@ -155,7 +155,8 @@ public class DetectDocumentText {
 		objectNames.stream() //
 				.forEach(s -> { //
 					try {
-						textBuilder.append(extractFileContent(projectId, bucketName, s)); 
+						textBuilder.append(extractFileContent(projectId, bucketName, s));
+						// Remove extracted text objects
 						deleteObject(projectId, bucketName, s);
 					} catch (InvalidProtocolBufferException e) {
 						throw new AssertionError(e);
