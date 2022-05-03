@@ -1,12 +1,12 @@
 # Document Translation
 
 
-This translates long documents text to a target language by leveraging Google Translation APIs. The translation process is composed of two major tasks:
+This project translates long documents to a target language (the translation uses Google Translation APIs). The process is composed of two major tasks:
 
 1. Detect text from an input document 
 2. Translate text
 
-Text detection utilizes the Google Vision APIs which is pre-trained to perform a very accurate  optical character recognition (OCR). Because Vision APIs limits the size of the API request to 10 MB, the input file is then uploaded to a Cloud Storage Bucket and from there the text detection is performed.
+Text detection utilizes the Google Vision APIs which is pre-trained to perform a very accurate optical character recognition (OCR). Because Vision APIs limits the size of the API request to 10 MB, the input file is then uploaded to a Cloud Storage Bucket and from there the text detection is performed.
 
 The software builds a string with the result of the OCR operation and sends it for Translation and the result is written to the log file or console.
 
